@@ -1,5 +1,5 @@
 from mesa import Agent
-from core.food_item import FoodItem
+from core.fooditem import FoodItem
 import random
 
 class DonorAgent(Agent):
@@ -18,3 +18,5 @@ class DonorAgent(Agent):
         )
         self.model.inventory.add_item(item)
         self.donation_history.append(item)
+        print(f"🧑‍🍳 Donor {self.unique_id} a donné {item.quantity}x {item.name} (type: {item.type}, exp: {item.expiry}j)")
+
